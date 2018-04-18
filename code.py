@@ -1,5 +1,8 @@
-﻿#coding=utf-8
-
+#coding=utf-8
+'''
+Completed time:2018-4-18
+Create by roger.
+'''
 import matplotlib.pyplot as plt
 from numpy import array
 import pandas as pd
@@ -187,5 +190,5 @@ for index in range(len(nation)):
         for str in city[index].split('.'):
             print("{source: %d" % index + ", target: %d}," % (city_set.index(str) + 55))
 
-print('记得换city')
+
 
