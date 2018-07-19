@@ -28,3 +28,5 @@
 - https://matplotlib.org/
 - https://www.jianshu.com/p/aa4150cf6c7f
 - http://www.scipy-lectures.org/
+
+### bar_merge.py 是两个柱状图合并一起画的代码
