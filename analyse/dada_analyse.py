@@ -22,14 +22,9 @@ def draw_bar():
     data_frame = pd.DataFrame(['[0, 500)', '[500, 1000)', '[1000, 1500)', '[1500, 2000)', '[2000, 2500)', '[2500, 3000)', '[3000, 3500)', '[3500, 4000)'])
 
     temp = []
-    temp.append((list(data1.sales)))
-    temp.append((list(data2.sales)))
-    temp.append((list(data3.sales)))
-    temp.append((list(data4.sales)))
-    temp.append((list(data5.sales)))
-    temp.append((list(data6.sales)))
-    temp.append((list(data7.sales)))
-    temp.append((list(data8.sales)))
+    for index in [data1, data2, data3, data4, data5, data6, data7, data8]:
+        temp.append(list(index.sales))
+
     temp = pd.Series(temp)
     data_frame['list'] = temp
     data_frame.columns = ['index', 'list']
