@@ -35,9 +35,8 @@ def draw_bar():
     data_frame['frequency'] = data_frame['count'].map(lambda x: x / total_num)
 
     '''累计频率'''
-    acc_fre = list(data_frame['frequency'])
-    for index in range(1, 8, 1):
-        acc_fre[index] = acc_fre[index] + acc_fre[index - 1]
+    acc_fre = np.array((data_frame['frequency']))
+    acc_fre = np.cumsum(acc_fre)
 
     data_frame['acc_fre'] = np.array(acc_fre)
     data_frame.index = data_frame['index']
