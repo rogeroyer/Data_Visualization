@@ -31,7 +31,7 @@ def draw_bar():
     data_frame['mean'] = data_frame['list'].map(lambda x: np.mean(x))
     data_frame['median'] = data_frame['list'].map(lambda x: np.median(x))
     data_frame['count'] = data_frame['list'].map(lambda x: len(x))
-    total_num = sum(data_frame['count'])       # 巨记录数 #
+    total_num = sum(data_frame['count'])       # 总记录数 #
     data_frame['frequency'] = data_frame['count'].map(lambda x: x / total_num)
 
     '''累计频率'''
